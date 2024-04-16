@@ -1,0 +1,37 @@
+<resources>
+    <string name="app_name">AndroidMaster</string>
+    <string name="male">Hombre</string>
+    <string name="female">Mujer</string>
+    <string name="height">Altura</string>
+    <string name="weight">Peso</string>
+    <string name="age">Edad</string>
+    <string name="calculate">Calcular</string>
+    <string name="result">Tu resultado:</string>
+    <string name="recalculate">RE CALCULAR:</string>
+
+    <string name="error">Error</string>
+
+    <string name="title_bajo_peso">Bajo peso</string>
+    <string name="description_bajo_peso">Estas por debajo de lo óptimo para tu peso y altura.</string>
+
+    <string name="title_peso_normal">Normal</string>
+    <string name="description_peso_normal">Estas en lo óptimo para tu peso y altura.</string>
+
+    <string name="title_sobrepeso">Sobrepeso</string>
+    <string name="description_sobrepeso">Estas por encima de lo óptimo para tu peso y altura.</string>
+
+    <string name="title_obesidad">Obesidad</string>
+    <string name="description_obesidad">Estas MUY por encima de lo óptimo para tu peso y altura.</string>
+
+    <!--    TODO apo-->
+    <string name="todo_title">Bienvenido</string>
+    <string name="todo_categories">Categorías:</string>
+    <string name="todo_task">Tareas:</string>
+    <string name="todo_dialog_add_task">Añadir tarea:</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="enter_your_email">Ingrese su Email</string>
+    <string name="enter_your_pass">Ingrese su constraseña</string>
+    <string name="re_enter_your_pass">Reingrese su constraseña</string>
+    <string name="type_your_task">Type your task .....</string>
+</resources>

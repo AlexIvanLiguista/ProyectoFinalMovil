@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "1074320848044",
+    "firebase_url": "https://finalproject-d5a99-default-rtdb.firebaseio.com",
+    "project_id": "finalproject-d5a99",
+    "storage_bucket": "finalproject-d5a99.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1074320848044:android:d9301520cf65efea261b09",
+        "android_client_info": {
+          "package_name": "com.ups.androidmaster"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCGWOU_1HCzAjpNX0mO69cKDYenPTl-TWs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
