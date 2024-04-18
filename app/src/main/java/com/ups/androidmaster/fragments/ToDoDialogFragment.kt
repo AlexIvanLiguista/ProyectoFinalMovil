@@ -48,8 +48,10 @@ class ToDoDialogFragment : DialogFragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         if (arguments != null){
-
-            toDoData = ToDoData(arguments?.getString("taskId").toString() ,arguments?.getString("task").toString())
+            toDoData = ToDoData(
+                arguments?.getString("taskId").toString() ,
+                arguments?.getString("task").toString()
+            )
             binding.todoEt.setText(toDoData?.task)
         }
         registerEvents()
@@ -65,9 +67,9 @@ class ToDoDialogFragment : DialogFragment() {
                     toDoData?.task = todoTask
                     listener.onUpdateTask(toDoData!!,binding.todoEt)
                 }
-                listener.onSaveTask(todoTask,binding.todoEt)
+                //listener.onSaveTask(todoTask,binding.todoEt)
             }else{
-                Toast.makeText(context,"Tarea",Toast.LENGTH_SHORT)
+                Toast.makeText(context,"Por favor ingrese la tarea",Toast.LENGTH_SHORT)
             }
         }
         binding.todoClose.setOnClickListener {

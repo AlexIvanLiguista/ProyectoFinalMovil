@@ -1,6 +1,7 @@
 package com.ups.androidmaster.fragments
 
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -16,6 +17,7 @@ import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.database.ValueEventListener
+import com.ups.androidmaster.R
 import com.ups.androidmaster.databinding.FragmentHomeBinding
 import com.ups.androidmaster.utils.ToDoAdapter
 import com.ups.androidmaster.utils.ToDoData
@@ -46,6 +48,8 @@ class HomeFragment : Fragment(), ToDoDialogFragment.DialogNextBtnClickListener,
         init(view)
         getDataFromFirebase()
         registerEvents()
+        //navController = Navigation.findNavController(view)
+        closeSession()
     }
 
     private fun registerEvents() {
@@ -96,6 +100,7 @@ class HomeFragment : Fragment(), ToDoDialogFragment.DialogNextBtnClickListener,
     }
 
     override fun onSaveTask(todo: String, todoEt: TextInputEditText) {
+        Log.d("SaveTask", "Adding task: $todo")
         databaseReference.push().setValue(todo).addOnCompleteListener {
             if (it.isSuccessful){
                 Toast.makeText(context,"Guardado correctamente", Toast.LENGTH_SHORT).show()
@@ -107,13 +112,13 @@ class HomeFragment : Fragment(), ToDoDialogFragment.DialogNextBtnClickListener,
         }
     }
 
+
     override fun onUpdateTask(toDoData: ToDoData, todoEt: TextInputEditText) {
         val map = HashMap<String, Any>()
         map[toDoData.taskId] = toDoData.task
         databaseReference.updateChildren(map).addOnCompleteListener {
             if (it.isSuccessful) {
                 Toast.makeText(context, "Actualizado Correctamente", Toast.LENGTH_SHORT).show()
-
             } else {
                 Toast.makeText(context, it.exception.toString(), Toast.LENGTH_SHORT).show()
             }
@@ -144,5 +149,11 @@ class HomeFragment : Fragment(), ToDoDialogFragment.DialogNextBtnClickListener,
         )
     }
 
+    private fun closeSession(){
+        binding.btnCloseSession.setOnClickListener {
+            FirebaseAuth.getInstance().signOut()
+            navController.popBackStack()
+        }
+    }
 
 }

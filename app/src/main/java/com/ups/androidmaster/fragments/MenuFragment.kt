@@ -1,8 +1,6 @@
 package com.ups.androidmaster.fragments
 
 import android.os.Bundle
-import android.os.Handler
-import android.os.Looper
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -11,41 +9,39 @@ import androidx.navigation.NavController
 import androidx.navigation.Navigation
 import com.google.firebase.auth.FirebaseAuth
 import com.ups.androidmaster.R
+import com.ups.androidmaster.databinding.FragmentMenuBinding
 
-class SplashFragment : Fragment() {
-
-    private lateinit var mAuth: FirebaseAuth
+class MenuFragment : Fragment() {
     private lateinit var navController: NavController
-
+    private lateinit var mAuth: FirebaseAuth
+    private lateinit var binding:FragmentMenuBinding
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_splash, container, false)
+        binding = FragmentMenuBinding.inflate(inflater,container,false)
+        return binding.root
+        //return inflater.inflate(R.layout.fragment_menu, container, false)
     }
+
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
         init(view)
-
-        val isLogin: Boolean = mAuth.currentUser != null
-
-        val handler = Handler(Looper.myLooper()!!)
-        handler.postDelayed({
-
-            if (isLogin)
-                navController.navigate(R.id.action_splashFragment_to_signInFragment)
-            else
-                navController.navigate(R.id.action_splashFragment_to_signInFragment)
-                //navController.navigate(R.id.action_splashFragment_to_homeFragment)
-
-        }, 2000)
+        binding.btnIMCApp.setOnClickListener {
+            navController.navigate(R.id.action_menuFragment_to_imcCalculatorActivity)
+        }
+        binding.btnTask.setOnClickListener {
+            navController.navigate(R.id.action_menuFragment_to_homeFragment)
+        }
+        binding.btnTODO.setOnClickListener {
+            navController.navigate(R.id.action_menuFragment_to_todoActivity)
+        }
     }
 
     private fun init(view: View) {
-        mAuth = FirebaseAuth.getInstance()
         navController = Navigation.findNavController(view)
+        mAuth = FirebaseAuth.getInstance()
     }
 
 }

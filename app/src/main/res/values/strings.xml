@@ -28,10 +28,15 @@
     <string name="todo_categories">Categorías:</string>
     <string name="todo_task">Tareas:</string>
     <string name="todo_dialog_add_task">Añadir tarea:</string>
+    <string name="todo_dialog_category_business">Negocios</string>
+    <string name="todo_dialog_category_other">Otros</string>
+    <string name="todo_dialog_category_personal">Personal</string>
+    <string name="todo_dialog_add_task_button">Crear tarea</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="enter_your_email">Ingrese su Email</string>
     <string name="enter_your_pass">Ingrese su constraseña</string>
     <string name="re_enter_your_pass">Reingrese su constraseña</string>
-    <string name="type_your_task">Type your task .....</string>
+    <string name="type_your_task">Ingrese su tarea</string>
+    <string name="close_session">Cerrar Sesión</string>
 </resources>
