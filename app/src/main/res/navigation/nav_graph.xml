@@ -62,11 +62,6 @@
         android:label="fragment_home"
         tools:layout="@layout/fragment_home" />
     <activity
-        android:id="@+id/menuActivity"
-        android:name="com.ups.androidmaster.MenuActivity"
-        android:label="activity_menu"
-        tools:layout="@layout/activity_menu" />
-    <activity
         android:id="@+id/imcCalculatorActivity"
         android:name="com.ups.androidmaster.imccalculator.ImcCalculatorActivity"
         android:label="activity_imc_calculator"

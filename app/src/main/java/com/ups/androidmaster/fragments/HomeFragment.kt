@@ -150,10 +150,10 @@ class HomeFragment : Fragment(), ToDoDialogFragment.DialogNextBtnClickListener,
     }
 
     private fun closeSession(){
-        binding.btnCloseSession.setOnClickListener {
-            FirebaseAuth.getInstance().signOut()
-            navController.popBackStack()
-        }
+//        binding.btnCloseSession.setOnClickListener {
+//            FirebaseAuth.getInstance().signOut()
+//            navController.popBackStack()
+//        }
     }
 
 }

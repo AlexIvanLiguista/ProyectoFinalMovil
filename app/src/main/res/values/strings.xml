@@ -24,7 +24,7 @@
     <string name="description_obesidad">Estas MUY por encima de lo óptimo para tu peso y altura.</string>
 
     <!--    TODO apo-->
-    <string name="todo_title">Bienvenido</string>
+    <string name="todo_title">Bienvenido a ToDoNew</string>
     <string name="todo_categories">Categorías:</string>
     <string name="todo_task">Tareas:</string>
     <string name="todo_dialog_add_task">Añadir tarea:</string>
